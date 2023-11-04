@@ -11,5 +11,8 @@ print(r"""
  |_|  |_/_/    \_\_| \_|\_____|_|  |_/_/    \_\_| \_|
 """)
 
-print("Welcome to the word guessing game")
-print("It's all about animals and staying ALIVE...")
+welcome_str = """Welcome to the word guessing game where its all about 
+animals and staying ALIVE..."""
+print(welcome_str)
+
+
