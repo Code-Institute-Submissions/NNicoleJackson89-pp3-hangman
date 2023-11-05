@@ -12,7 +12,7 @@ print(r"""
 """)
 
 welcome_str = """Welcome to the word guessing game where its all about
-animals and staying ALIVE..."""
+animals and staying ALIVE... \n"""
 print(welcome_str)
 
 
@@ -21,16 +21,23 @@ def display_rules():
     This fuction will display the rules if the user inputs y and skips this
     section if n is inputted
     """
-    question = input("Would you like to see the rules? y = yes, n = no. \n")
-    if question.lower() == "y":
-        print("**************************************************************")
-        print("Hangman is a simple word game, quessing one letter at a time,")
-        print("Guess animal names with difficulty of easy, medium or hard,")
-        print("If 6 incorrect letters are guessed, you will be hung and lose,")
-        print("To win you will need to complete the word before being hung.")
-        print("**************************************************************")
-    elif question.lower() == "n":
-        print("Request user name function to be placed here")
-    else:
-        print("Please enter 'y' for yes or 'n' for no.")
-display_rules()
+    while True:
+        question = input("Would you like to see the rules? y/n\n")
+        if question.lower() == "y":
+            print(
+                "\n*******************************************************\n" +
+                "This is a simple word game, quess one letter at a time.\n" +
+                "Guess animal names with 3 difficulty levels:\n" +
+                "Easy, medium or hard.\n" +
+                "If 6 incorrect letters are guessed, you will be hung.\n" +
+                "To win you need to complete the word before being hung.\n" +
+                "*******************************************************\n"
+                )
+            break
+        elif question.lower() == "n":
+            break
+        else:
+            print("Please enter 'y' for yes or 'n' for no. \n")
+
+
+
