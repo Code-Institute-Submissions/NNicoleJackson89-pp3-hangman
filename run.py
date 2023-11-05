@@ -1,5 +1,6 @@
 # Import section
 import random
+from words import words_list
 
 # Prints the logo & Welcome message
 print(r"""
@@ -22,7 +23,7 @@ def display_rules():
     section if n is inputted
     """
     while True:
-        question = input("Would you like to see the rules? y/n\n")
+        question = input("Would you like to see the rules, y/n?\n")
         if question.lower() == "y":
             print(
                 "\n*******************************************************\n" +
@@ -39,9 +40,6 @@ def display_rules():
         else:
             print("Please enter 'y' for yes or 'n' for no. \n")
 
-
-
-display_rules()
 
 
 def users_name():
@@ -61,6 +59,16 @@ def users_name():
             print(err)
 
 
+
+
+
+
+display_rules()
 users_name()
+
+
+
+
+
 
 
