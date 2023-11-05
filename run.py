@@ -31,7 +31,7 @@ def display_rules():
                 "Easy, medium or hard.\n" +
                 "If 6 incorrect letters are guessed, you will be hung.\n" +
                 "To win you need to complete the word before being hung.\n" +
-                "*******************************************************\n"
+                "*******************************************************"
                 )
             break
         elif question.lower() == "n":
@@ -41,3 +41,24 @@ def display_rules():
 
 
 
+display_rules()
+
+
+def users_name():
+    """
+    This function will ask the user to enter their, an error will be 
+    raised where numbers, characters or spaces are entered
+    """
+    while True:
+        try:
+            name = input("\nPlease enter your name:\n")
+            if not name.isalpha():
+                raise ValueError("Your name can only contain letters.\n")
+            else:
+                print(f"\nReady to play {name.capitalize()}...\n")
+                break
+        except ValueError as err:
+            print(err)
+
+
+users_name()
