@@ -59,15 +59,15 @@ def display_rules():
 #             print(err)
 
 
-def random_word(words_list):
-    """
-    This function returns a random word of various difficulty from the words list
-    """
-    word = random.choice(words_list)
-    return word.upper()
+# def random_word(words_list):
+#     """
+#     This function returns a random word of various difficulty from the words list
+#     """
+#     word = random.choice(words_list)
+#     return word.upper()
 
-print(random_word(words_list)) #Needs to be removed 
 
+ 
 
 
 # display_rules()
