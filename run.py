@@ -18,49 +18,49 @@ animals and staying ALIVE... \n"""
 print(welcome_str)
 
 
-def display_rules():
-    """
-    This fuction will display the rules if the user inputs y and skips this
-    section if n is inputted
-    """
-    while True:
-        question = input("Would you like to see the rules, y/n?\n")
-        if question.lower() == "y":
-            print(
-                "\n*******************************************************\n" +
-                "This is a simple word game, quess one letter at a time.\n" +
-                "Guess animal names with 3 difficulty levels:\n" +
-                "Easy, medium or hard.\n" +
-                "If 6 incorrect letters are guessed, you will be hung.\n" +
-                "To win you need to complete the word before being hung.\n" +
-                "*******************************************************"
-                )
-            break
-        elif question.lower() == "n":
-            break
-        else:
-            print("Please enter 'y' for yes or 'n' for no. \n")
+# def display_rules():
+#     """
+#     This fuction will display the rules if the user inputs y and skips this
+#     section if n is inputted
+#     """
+#     while True:
+#         question = input("Would you like to see the rules, y/n?\n")
+#         if question.lower() == "y":
+#             print(
+#                 "\n*******************************************************\n" +
+#                 "This is a simple word game, quess one letter at a time.\n" +
+#                 "Guess animal names with 3 difficulty levels:\n" +
+#                 "Easy, medium or hard.\n" +
+#                 "If 6 incorrect letters are guessed, you will be hung.\n" +
+#                 "To win you need to complete the word before being hung.\n" +
+#                 "*******************************************************"
+#                 )
+#             break
+#         elif question.lower() == "n":
+#             break
+#         else:
+#             print("Please enter 'y' for yes or 'n' for no. \n")
 
 
 
-def users_name():
-    """
-    This function will ask the user to enter their, an error will be 
-    raised where numbers, characters or spaces are entered
-    """
-    while True:
-        try:
-            name = input("\nPlease enter your name:\n")
-            if not name.isalpha():
-                raise ValueError("Your name can only contain letters.\n")
-            else:
-                print(f"\nReady to play {name.capitalize()}...\n")
-                break
-        except ValueError as err:
-            print(err)
+# def users_name():
+#     """
+#     This function will ask the user to enter their, an error will be 
+#     raised where numbers, characters or spaces are entered
+#     """
+#     while True:
+#         try:
+#             name = input("\nPlease enter your name:\n")
+#             if not name.isalpha():
+#                 raise ValueError("Your name can only contain letters.\n")
+#             else:
+#                 print(f"\nReady to play {name.capitalize()}...\n")
+#                 break
+#         except ValueError as err:
+#             print(err)
 
 
-def random_word(words_list):
+def random_word():
     """
     This function returns a random word of various difficulty from the
     words list
@@ -69,15 +69,21 @@ def random_word(words_list):
     return word.lower()
 
 
+# def get_stages():
+#     max_attempts = 6
+#     return stages
+# print(get_stages(max_attempts))
 
 
 
 
 
 
-display_rules()
-users_name()
-print(random_word(words_list))
+
+
+# display_rules()
+# users_name()
+print(random_word())
 
 
 
