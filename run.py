@@ -60,12 +60,24 @@ def users_name():
             print(err)
 
 
+def random_word(words_list):
+    """
+    This function returns a random word of various difficulty from the
+    words list
+    """
+    word = random.choice(words_list)
+    return word.lower()
+
+
+
+
 
 
 
 
 display_rules()
 users_name()
+print(random_word(words_list))
 
 
 
