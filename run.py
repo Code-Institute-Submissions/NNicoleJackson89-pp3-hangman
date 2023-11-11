@@ -91,6 +91,37 @@ def random_word():
     return word.lower()
 
 
+def display_hidden_word(hidden_word):
+    """
+    This function prints the hangmans stage and displays the random
+    word as underscores, hiding the word from the user but displaying 
+    the number of letters the hidden word cosists of
+    """
+    print(stages[0])
+
+    blank_word = "_" * len(hidden_word)
+    print(blank_word)
+
+
+
+
+
+
+
+
+
+    # while True:
+    #     try:
+    #         guess = input("Please guess a letter: ").lower()
+    #         if not guess.isalpha():
+    #             print("Your guess needs to be an alphabetical letter\n")
+    #         elif len(guess) > 1:
+    #             print("Your guess can only be one letter\n")
+    #         else:
+    #             return guess
+    #     except ValueError as err:
+    #         print(err)
+
 
 
 
@@ -108,7 +139,11 @@ def random_word():
 display_rules()
 users_name()
 # print(difficulty_level())
-print(random_word())
+
+print(random_word()) #will get deleted
+hidden_word = random_word()
+display_hidden_word(hidden_word)
+
 
 
 
