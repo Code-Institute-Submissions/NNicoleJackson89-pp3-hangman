@@ -98,37 +98,26 @@ def display_hidden_word(hidden_word):
     the number of letters the hidden word cosists of
     """
     print(stages[0])
-
-    blank_word = "_" * len(hidden_word)
+    blank_word = "_ " * len(hidden_word)
     print(blank_word)
 
 
-
-
-
-
-
-
-
-    # while True:
-    #     try:
-    #         guess = input("Please guess a letter: ").lower()
-    #         if not guess.isalpha():
-    #             print("Your guess needs to be an alphabetical letter\n")
-    #         elif len(guess) > 1:
-    #             print("Your guess can only be one letter\n")
-    #         else:
-    #             return guess
-    #     except ValueError as err:
-    #         print(err)
-
-
-
-
-
-
-
-
+def users_guess():
+    """
+    This function request the users to guess a letter, an error is raised
+    where anything other than a letter is entered
+    """
+    while True:
+        try:
+            guess = input("Please guess a letter: ").lower()
+            if not guess.isalpha():
+                raise ValueError("Guess needs to be an alphabetical letter\n")
+            elif len(guess) > 1:
+                raise ValueError("Your guess can only be one letter\n")
+            else:
+                return guess
+        except ValueError as err:
+            print(err)
 
 
 
@@ -143,6 +132,10 @@ users_name()
 print(random_word()) #will get deleted
 hidden_word = random_word()
 display_hidden_word(hidden_word)
+
+users_guess()
+
+
 
 
 
