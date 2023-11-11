@@ -91,24 +91,6 @@ def random_word():
     return word.lower()
 
 
-def get_stages():
-    """
-    This function prints the hangmans stage and requests the user to input
-    1 letter, if anything else is entered an error will be raised
-    """
-    print(stages[0])
-
-    while True:
-        try:
-            guess = input("Please guess a letter: ").lower()
-            if not guess.isalpha():
-                print("Your guess needs to be an alphabetical letter\n")
-            elif len(guess) > 1:
-                print("Your guess can only be one letter\n")
-            else:
-                return guess
-        except ValueError as err:
-            print(err)
 
 
 
@@ -127,7 +109,7 @@ display_rules()
 users_name()
 # print(difficulty_level())
 print(random_word())
-get_stages()
+
 
 
 
