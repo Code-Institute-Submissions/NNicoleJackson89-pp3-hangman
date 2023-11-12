@@ -99,7 +99,13 @@ def display_hidden_word(hidden_word, guessed_letters, attempts, max_attempts):
     """
     print(stages[attempts - max_attempts])
 
-    blank_word = "_ " * len(hidden_word)
+    blank_word = " "
+    # print(blank_word)
+    for i in hidden_word:
+        if i in guessed_letters:
+            blank_word += i + " "
+        else:
+            blank_word += "_" + " "
     print(blank_word)
 
     print(f"\nGuessed letters: {', '.join(guessed_letters)}\n")
@@ -137,7 +143,7 @@ def hangman():
     while True:
         display_hidden_word(hidden_word, guessed_letters, attempts,
                             max_attempts)
-        # print(hidden_word)
+        print(hidden_word)
 
         guess = users_guess(guessed_letters)
 
