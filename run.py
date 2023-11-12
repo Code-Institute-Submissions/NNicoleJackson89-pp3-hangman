@@ -91,23 +91,29 @@ def random_word():
     return word.lower()
 
 
-def display_hidden_word(hidden_word, guessed_letters, attempts, max_attempts):
+def display_hidden_word(hidden_word, guessed_letters):
     """
-    This function prints the hangmans stage and displays the random
-    word as underscores, hiding the word from the user but displaying 
-    the number of letters the hidden word cosists of
+    This function displays the random word as underscores, hiding the word from
+    the user but displaying the number of letters the hidden word cosists of
+    until updated with the correct guessed letters
     """
-    print(stages[attempts - max_attempts])
-
-    blank_word = " "
-    # print(blank_word)
+    blank_word = ""
+    # iterate through the hidden word and replace _ with correct letters
     for i in hidden_word:
         if i in guessed_letters:
             blank_word += i + " "
         else:
             blank_word += "_" + " "
-    print(blank_word)
+    return blank_word
 
+
+def hangman_stage(guessed_letters, attempts, max_attempts):
+    """
+    This function prints initial state of the stage and guessed letters as
+    well as the updated state throughout the game
+    """
+    print(stages[attempts - max_attempts])
+    # accumalates the already guessed letters for the user to refer back to
     print(f"\nGuessed letters: {', '.join(guessed_letters)}\n")
 
 
@@ -133,7 +139,8 @@ def users_guess(guessed_letters):
 
 def hangman():
     """
-    This function
+    This function runs the game loop until the word has been guessed or the 
+    user has been hung and lost
     """
     hidden_word = random_word()
     guessed_letters = []
@@ -141,26 +148,23 @@ def hangman():
     max_attempts = 7
 
     while True:
-        display_hidden_word(hidden_word, guessed_letters, attempts,
-                            max_attempts)
-        print(hidden_word)
+        hangman_stage(guessed_letters, attempts, max_attempts)
+        print(display_hidden_word(hidden_word, guessed_letters))
 
         guess = users_guess(guessed_letters)
-
         if guess in hidden_word:
             print(f"\nCorrect, {guess} is in the secret word!")
         else:
             print(f"\nIncorrect, {guess} is not in the secret word.")
             print("One life lost...")
             max_attempts -= 1
+            if max_attempts == 1:
+                print(f"Game lost, the secret word is {hidden_word}.")
+                print("Better luck next time...")
         guessed_letters.append(guess)
 
 
 hangman()
-
-
-
-
 
 
 
