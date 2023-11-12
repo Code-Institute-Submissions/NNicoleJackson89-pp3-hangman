@@ -175,10 +175,31 @@ def hangman():
         print(f"\nYou LOSE, {hidden_word} was the secret word...")
 
 
+def play_again():
+    """
+    This function allows the user to choose to play again or exits if not
+    """
+    while True:
+        question = input("\nWould you like play again, y/n?\n")
+        if question.lower() == "y":
+            hangman()
+        elif question.lower() == "n":
+            print("See you next time!")
+            break
+        else:
+            print("Please enter 'y' for yes or 'n' for no. \n")
+
+
 def main():
+    """
+    This function runs the game loop by displaying the rules, then requesting
+    the users name followed by the current game function and finally the 
+    function to allow the user to exit the gae or play again
+    """
     display_rules()
     users_name()
     hangman()
+    play_again()
 #   print(difficulty_level())
 
 
