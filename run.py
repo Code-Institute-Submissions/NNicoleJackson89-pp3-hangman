@@ -175,9 +175,11 @@ def hangman():
         print(f"\nYou LOSE, {hidden_word} was the secret word...")
 
 
-display_rules()
-users_name()
-hangman()
-users_guess()
-# print(difficulty_level())
+def main():
+    display_rules()
+    users_name()
+    hangman()
+#   print(difficulty_level())
 
+
+main()
