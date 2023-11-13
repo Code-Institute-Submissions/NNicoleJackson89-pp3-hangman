@@ -3,6 +3,8 @@ import random
 from words import words_list
 import words
 from hangman_stage import stages
+import sys, time
+from time import sleep
 
 # Prints the logo & Welcome message
 print(r"""
@@ -14,8 +16,8 @@ print(r"""
  |_|  |_/_/    \_\_| \_|\_____|_|  |_/_/    \_\_| \_|
 """)
 
-welcome_str = """Welcome to the word guessing game where its all about
-animals and staying ALIVE... \n"""
+welcome_str = """Welcome to the word guessing game where your goal is
+to stay ALIVE...\n"""
 print(welcome_str)
 
 
@@ -27,7 +29,7 @@ def display_rules():
     while True:
         question = input("Would you like to see the rules, y/n?\n")
         if question.lower() == "y":
-            print(
+            typing(
                 "\n******************************************************\n" +
                 "This is a simple word game, quess one letter at a time.\n" +
                 "Guess animal names with 3 difficulty levels:\n" +
@@ -40,7 +42,7 @@ def display_rules():
         elif question.lower() == "n":
             break
         else:
-            print("Please enter 'y' for yes or 'n' for no. \n")
+            print("\nPlease enter 'y' for yes or 'n' for no. \n")
 
 
 def users_name():
@@ -54,14 +56,14 @@ def users_name():
             if not name.isalpha():
                 raise ValueError("Your name can only contain letters.\n")
             else:
-                print(f"\nReady to play {name.capitalize()}...")
-                print("Good luck!\n")
+                typing(f"\nReady to play {name.capitalize()}...")
+                typing("Good luck!\n")
                 break
         except ValueError as err:
             print(err)
 
 
-# Need to get this fuction to work with the randowm words befor commiting this function
+# Need to get this fuction to work with the randowm words before commiting this
 # def difficulty_level():
 #     """
 #     This function allows the user to select between three levels of
@@ -109,8 +111,8 @@ def display_hidden_word(hidden_word, guessed_letters):
 
 def hangman_stage(guessed_letters, max_attempts):
     """
-    This function prints initial state of the stage and guessed letters as
-    well as the updated state throughout the game
+    This function prints the initial state of the stage and guessed letters
+    as well as the updated state throughout the game
     """
     print(stages[max_attempts])
     # accumalates the already guessed letters for the user to refer back to
@@ -140,7 +142,7 @@ def users_guess(guessed_letters):
 def hangman():
     """
     This function runs the game loop until the word has been guessed or the
-    user has been hung and lost the guessing game, feedback is displayed 
+    user has been hung and lost the guessing game, feedback is displayed
     to the user throughout
     """
     hidden_word = random_word(words_list)
@@ -151,13 +153,13 @@ def hangman():
     while max_attempts < 6 and not word_completion:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        # print(hidden_word)
+        print(hidden_word) # must be deleted
         guess = users_guess(guessed_letters)
         if guess in hidden_word:
-            print(f"\nCorrect, {guess} is in the secret word!")
+            typing(f"\nCorrect, {guess} is in the secret word!")
             guessed_letters.append(guess)
         else:
-            print(f"\nIncorrect, {guess} is not in the secret word.")
+            typing(f"\nIncorrect, {guess} is not in the secret word.")
             max_attempts += 1
             guessed_letters.append(guess)
 
@@ -168,32 +170,41 @@ def hangman():
     if word_completion:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        print(f"\nYou WON! {hidden_word} is the secret word!")
+        typing(f"\nYou WON! {hidden_word} is the secret word!")
     else:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        print(f"\nYou LOSE, {hidden_word} was the secret word...")
+        typing(f"\nYou LOSE, {hidden_word} was the secret word...")
 
 
 def play_again():
     """
-    This function allows the user to choose to play again or exits if not
+    This function allows the user to choose to play again or exit if not
     """
     while True:
-        question = input("\nWould you like play again, y/n?\n")
+        question = input("\nWould you like play again, y/n?\n").lower()
         if question.lower() == "y":
             hangman()
         elif question.lower() == "n":
-            print("See you next time!")
+            typing("\nSee you next time!")
             break
         else:
-            print("Please enter 'y' for yes or 'n' for no. \n")
+            print("\nPlease enter 'y' for yes or 'n' for no.\n")
+
+
+def typing(text):
+    words = text
+    for char in words:
+        time.sleep(0.03)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    print()
 
 
 def main():
     """
     This function runs the game loop by displaying the rules, then requesting
-    the users name followed by the current game function and finally the 
+    the users name followed by the current game function and finally the
     function to allow the user to exit the gae or play again
     """
     display_rules()
