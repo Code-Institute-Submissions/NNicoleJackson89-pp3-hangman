@@ -1,32 +1,75 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
 
-Welcome,
+### [View the live page here]()
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### Wireframe
 
-## Reminders
+## User Experience
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+### User Stories
 
-## Creating the Heroku app
+## Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### Existing Features
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Future Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Testing
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### CI Python Linter
 
-Connect your GitHub repository and deploy as normal.
+### Python Checker
 
-## Constraints
+#### Testing
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Manual Testing
 
----
+|What was tested|Result|
+|---|---|
+|||
+|||
+|||
+|||
 
-Happy coding!
+### Input validation Testing
+
+### Fixed bugs
+
+|What was tested / Expected results|Actual Results|What was done to fix the bug|
+|---|---|---|
+||||
+||||
+||||
+
+## Deployment
+
+### [Heroku](https://heroku.com/apps) deployment
+
+
+
+### Cloning the GitHub repository
+
+Cloning a repository will download a full copy of the data to your computer. This is useful when larger commits need to be pushed, adding or removing files and fixing merge conflicts.
+
+1. Login to GitHub
+2. Click the repository you wish to clone (Top left corner)
+3. Click 'Code' which is shown above the list of files in the repository
+4. Click the 'Local' tab, copy the HTTPS URL
+5. Open Codeanywhere, click 'New Workspace'
+6. Paste the copied URL into the space given under 'Repository URL'
+7. Click 'Create' and the local clone will be created.
+
+### Forking the GitHub repository
+
+Forking a GitHub repository will allow you to make a copy of the repository, changes can then be made that will not affect the original repository. This is useful for proposed changes, ideas, fixes to an original repository.
+
+1. Login to GitHub
+2. Click the repository you wish to fork (Top left corner)
+3. Click the 'Fork' drop-down in the top right-hand corner
+4. Then click 'Create a new fork' you will now have a copy to work on.
+
+## Technologies Used
+
+## Credits
+
+## Acknowledgements

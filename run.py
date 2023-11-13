@@ -1,6 +1,5 @@
 # Import section
 import random
-# from words import words_list
 import words
 from hangman_stage import stages
 import sys
@@ -179,7 +178,6 @@ def hangman():
     while max_attempts < 6 and not word_completion:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        # print(hidden_word) # must be deleted
         guess = users_guess(guessed_letters)
         if guess in hidden_word:
             typing(txtcolor.OKGREEN +
