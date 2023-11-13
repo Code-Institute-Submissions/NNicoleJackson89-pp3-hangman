@@ -1,9 +1,10 @@
 # Import section
 import random
-from words import words_list
+# from words import words_list
 import words
 from hangman_stage import stages
-import sys, time
+import sys
+import time
 from time import sleep
 
 # Prints the logo & Welcome message
@@ -63,25 +64,24 @@ def users_name():
             print(err)
 
 
-# Need to get this fuction to work with the randowm words before commiting this
-# def difficulty_level():
-#     """
-#     This function allows the user to select between three levels of
-#     difficulty, easy, medium or hard
-#     """
-#     while True:
-#         try:
-#             level = input("Choose easy, medium or hard words?\n").lower()
-#             if level not in ["easy", "medium", "hard"]:
-#                 raise ValueError("You need to type: easy, medium or hard.\n")
-#             elif level == "easy":
-#                 return words.easy_list
-#             elif level == "medium":
-#                 return words.medium_list
-#             else:
-#                 return words.hard_list
-#         except ValueError as err:
-#             print(err)
+def difficulty_level():
+    """
+    This function allows the user to select between three levels of
+    difficulty, easy, medium or hard
+    """
+    while True:
+        try:
+            level = input("Choose easy, medium or hard words?\n").lower()
+            if level not in ["easy", "medium", "hard"]:
+                raise ValueError("You need to type: easy, medium or hard.\n")
+            elif level == "easy":
+                return words.easy_list
+            elif level == "medium":
+                return words.medium_list
+            else:
+                return words.hard_list
+        except ValueError as err:
+            print(err)
 
 
 def random_word(words_list):
@@ -145,6 +145,7 @@ def hangman():
     user has been hung and lost the guessing game, feedback is displayed
     to the user throughout
     """
+    words_list = difficulty_level()
     hidden_word = random_word(words_list)
     guessed_letters = []
     max_attempts = 0
@@ -153,7 +154,7 @@ def hangman():
     while max_attempts < 6 and not word_completion:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        print(hidden_word) # must be deleted
+        # print(hidden_word) # must be deleted
         guess = users_guess(guessed_letters)
         if guess in hidden_word:
             typing(f"\nCorrect, {guess} is in the secret word!")
@@ -193,6 +194,9 @@ def play_again():
 
 
 def typing(text):
+    """
+    This fucntion adds the typing effect to my chosen print statements
+    """
     words = text
     for char in words:
         time.sleep(0.03)
@@ -211,7 +215,6 @@ def main():
     users_name()
     hangman()
     play_again()
-#   print(difficulty_level())
 
 
 main()
