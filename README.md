@@ -8,7 +8,15 @@ Users can play a solo game of Hangman on one of three difficulty levels, each le
 
 ![Responsive](./readme-docs/am-i-responsive.png)
 
-### Wireframe
+## How to play
+
+- Hangman is a classic, quick word guessing game perfect to kill some free time or learn a few new words.
+- As the user you get the opportunity to choose one of three difficulty levels.
+- The object of this solo game is to guess the hidden word before the stick man is hung.
+- Gameplay continues until the figure has been hung (after 6 incorrect guesses) or the word has been correctly guessed, one letter at a time.
+
+## Flowchart
+![Flowchart](./readme-docs/flowchart.png)
 
 ## User Experience
 
