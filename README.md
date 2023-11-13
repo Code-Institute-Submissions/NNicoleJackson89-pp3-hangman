@@ -1,6 +1,12 @@
 # Hangman
 
-### [View the live page here]()
+### [View the live page here](https://hangman-animals-16cd61b71879.herokuapp.com/)
+
+This Hangman game is Python terminal based and run in the Code Institutes mock terminal on Heroku.
+
+Users can play a solo game of Hangman on one of three difficulty levels, each level has additional letters per word. All words are animal names so this would be a great game for animal lovers.
+
+![Responsive](./readme-docs/am-i-responsive.png)
 
 ### Wireframe
 
