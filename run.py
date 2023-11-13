@@ -7,15 +7,28 @@ import sys
 import time
 from time import sleep
 
+
+class txtcolor:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
 # Prints the logo & Welcome message
-print(r"""
+print(txtcolor.HEADER + r"""
   _    _          _   _  _____ __  __          _   _ 
  | |  | |   /\   | \ | |/ ____|  \/  |   /\   | \ | |
  | |__| |  /  \  |  \| | |  __| \  / |  /  \  |  \| |
  |  __  | / /\ \ | . ` | | |_ | |\/| | / /\ \ | . ` |
  | |  | |/ ____ \| |\  | |__| | |  | |/ ____ \| |\  |
  |_|  |_/_/    \_\_| \_|\_____|_|  |_/_/    \_\_| \_|
-""")
+""" + txtcolor.ENDC)
 
 welcome_str = """Welcome to the word guessing game where your goal is
 to stay ALIVE...\n"""
@@ -30,20 +43,22 @@ def display_rules():
     while True:
         question = input("Would you like to see the rules, y/n?\n")
         if question.lower() == "y":
-            typing(
-                "\n******************************************************\n" +
-                "This is a simple word game, quess one letter at a time.\n" +
-                "Guess animal names with 3 difficulty levels:\n" +
-                "Easy, medium or hard.\n" +
-                "If 6 incorrect letters are guessed, you will be hung.\n" +
-                "To win you need to complete the word before being hung.\n" +
-                "*******************************************************"
-                )
+            typing(txtcolor.HEADER +
+                   "\n******************************************************\n"
+                   "This is a simple word game, quess one letter at a time.\n"
+                   "Guess animal names with 3 difficulty levels:\n"
+                   "Easy, medium or hard.\n"
+                   "If 6 incorrect letters are guessed, you will be hung.\n"
+                   "To win you need to complete the word before being hung.\n"
+                   "*******************************************************"
+                   + txtcolor.ENDC)
             break
         elif question.lower() == "n":
             break
         else:
-            print("\nPlease enter 'y' for yes or 'n' for no. \n")
+            print(txtcolor.WARNING +
+                  "\nPlease enter 'y' for yes or 'n' for no. \n"
+                  + txtcolor.ENDC)
 
 
 def users_name():
@@ -55,7 +70,9 @@ def users_name():
         try:
             name = input("\nPlease enter your name:\n")
             if not name.isalpha():
-                raise ValueError("Your name can only contain letters.\n")
+                raise ValueError(txtcolor.FAIL +
+                                 "Your name can only contain letters."
+                                 + txtcolor.ENDC)
             else:
                 typing(f"\nReady to play {name.capitalize()}...")
                 typing("Good luck!\n")
@@ -73,7 +90,9 @@ def difficulty_level():
         try:
             level = input("Choose easy, medium or hard words?\n").lower()
             if level not in ["easy", "medium", "hard"]:
-                raise ValueError("You need to type: easy, medium or hard.\n")
+                raise ValueError(txtcolor.FAIL +
+                                 "You need to type: easy, medium or hard.\n"
+                                 + txtcolor.ENDC)
             elif level == "easy":
                 return words.easy_list
             elif level == "medium":
@@ -128,11 +147,17 @@ def users_guess(guessed_letters):
         try:
             guess = input("\nPlease guess a letter: ").upper()
             if not guess.isalpha():
-                raise ValueError("Guess needs to be an alphabetical letter.\n")
+                raise ValueError(txtcolor.FAIL +
+                                 "Guess needs to be an alphabetical letter.\n"
+                                 + txtcolor.ENDC)
             elif len(guess) > 1:
-                raise ValueError("Your guess can only be one letter.\n")
+                raise ValueError(txtcolor.FAIL +
+                                 "Your guess can only be one letter.\n"
+                                 + txtcolor.ENDC)
             elif guess in guessed_letters:
-                raise ValueError(f"You already guessed {guess}, try again.\n")
+                raise ValueError(txtcolor.WARNING +
+                                 f"You already guessed {guess}, try again.\n"
+                                 + txtcolor.ENDC)
             else:
                 return guess
         except ValueError as err:
@@ -157,10 +182,14 @@ def hangman():
         # print(hidden_word) # must be deleted
         guess = users_guess(guessed_letters)
         if guess in hidden_word:
-            typing(f"\nCorrect, {guess} is in the secret word!")
+            typing(txtcolor.OKGREEN +
+                   f"\nCorrect, {guess} is in the secret word!"
+                   + txtcolor.ENDC)
             guessed_letters.append(guess)
         else:
-            typing(f"\nIncorrect, {guess} is not in the secret word.")
+            typing(txtcolor.WARNING +
+                   f"\nIncorrect, {guess} is not in the secret word."
+                   + txtcolor.ENDC)
             max_attempts += 1
             guessed_letters.append(guess)
 
@@ -171,11 +200,15 @@ def hangman():
     if word_completion:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        typing(f"\nYou WON! {hidden_word} is the secret word!")
+        typing(txtcolor.OKGREEN +
+               f"\nYou WON! {hidden_word} is the secret word!"
+               + txtcolor.ENDC)
     else:
         hangman_stage(guessed_letters, max_attempts)
         print(" ".join(display_hidden_word(hidden_word, guessed_letters)))
-        typing(f"\nYou LOSE, {hidden_word} was the secret word...")
+        typing(txtcolor.WARNING +
+               f"\nYou LOSE, {hidden_word} was the secret word..."
+               + txtcolor.ENDC)
 
 
 def play_again():
@@ -190,7 +223,9 @@ def play_again():
             typing("\nSee you next time!")
             break
         else:
-            print("\nPlease enter 'y' for yes or 'n' for no.\n")
+            print(txtcolor.WARNING +
+                  "\nPlease enter 'y' for yes or 'n' for no.\n"
+                  + txtcolor.ENDC)
 
 
 def typing(text):
@@ -199,7 +234,7 @@ def typing(text):
     """
     words = text
     for char in words:
-        time.sleep(0.03)
+        time.sleep(0.02)
         sys.stdout.write(char)
         sys.stdout.flush()
     print()
