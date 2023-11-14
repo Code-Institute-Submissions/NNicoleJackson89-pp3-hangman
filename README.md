@@ -20,6 +20,12 @@ Users can play a solo game of Hangman on one of three difficulty levels, each le
 
 ## User Experience
 
+In this version of Hangman the user is presented with the classic game where each letter of a word is replaced with a dash (hidden word).  The user will need to guess this word one letter at a time. 
+
+With each correct guess the dash within this word updates and displays the letter in the correct position of the hidden word.
+
+The users goal is to guess the correct word before the game ends, this is displayed with a complete hangman stick figure as well as a message to notify the user that he/she has lost the game.
+
 ### User Stories
 
 ## Features
