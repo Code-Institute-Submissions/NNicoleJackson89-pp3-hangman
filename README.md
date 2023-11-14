@@ -12,7 +12,7 @@ Users can play a solo game of Hangman on one of three difficulty levels, each le
 
 - Hangman is a classic, quick word guessing game perfect to kill some free time or learn a few new words.
 - As the user you get the opportunity to choose one of three difficulty levels.
-- The object of this solo game is to guess the hidden word before the stick man is hung.
+- The objective of this solo game is to guess the hidden word before the stick man is hung.
 - Gameplay continues until the figure has been hung (after 6 incorrect guesses) or the word has been correctly guessed, one letter at a time.
 
 ## User Experience
@@ -21,14 +21,14 @@ In this version of Hangman the user is presented with the classic game where eac
 
 With each correct guess the dash within this word updates and displays the letter in the correct position of the hidden word.
 
-The users goal is to guess the correct word before the game ends, this is displayed with a complete hangman stick figure as well as a message to notify the user that he/she has lost the game.
+The users goal is to guess the correct word before the game ends, this is displayed with a complete hangman stick figure as well as a message to notify the user that they lost the game.
 
 ### Color Palette
 
-- The logo and the rules displays as purple
-- Error messages display in red to highlight a problem to the user
-- Correct guess notifications are displayed in green
-- Incorrect guess notifications are displayed in yellow
+- The logo and the rules display as purple.
+- Error messages display in red to highlight a problem to the user.
+- Correct guess notifications are displayed in green.
+- Incorrect guess notifications are displayed in yellow.
 
 ### User Stories
 
@@ -36,21 +36,21 @@ The users goal is to guess the correct word before the game ends, this is displa
 
 - Quickly and easily understand how the game works with a clear description of the game objective.
 - Navigate the main menu and options available easily.
-- Start the game, during game play to recieve messages of correct/incorrect guessed letters.
-- Kill time but enjoy the game, left with the mindset of wanting to play again.
+- Start the game, during game play to recieve messages of correct / incorrect guessed letters.
+- Kill time but enjoy the game, left with the idea of wanting to play again.
 
 #### As a returning visitor I want to:
 
 - Easily navigate through the menu and options available.
 - Play the game again, with new words to guess and choose different difficulty levels.
-- Improve my word skills and become better at guessing hidden words.
+- Improve my word skills and become better at guessing words.
 - Possibly see updated versions of the game
 
 #### As a frequent visitor I want to:
 
 - Easily navigate through the menu and options available.
-- Have added word categories or new words updated to the game.
-- Possibility or playing against another user or AI.
+- Added word categories or new words added to the game.
+- Possibility of playing against another user or AI.
 - Challenge myself with harder levels.
 
 ## Features
@@ -59,69 +59,98 @@ The users goal is to guess the correct word before the game ends, this is displa
 - Game rules: These will be displayed if the user chooses to see them, if not, this step will be skipped.
 - Name request: The user is requested to input their name.
 - Difficulty options: The user can choose from three options, easy, medium, hard.
-- Game display: The hangmans gallows is displayed, the hidden word is displayed with dashes, guessed letters are displayed. these all ghet updated throughout the progress of the game.
-- Correct/Incorrect notification: This is displayed when the used guessed a correct/incorrect letetr respectively.
+- Game display: The hangmans gallows is displayed, the hidden word is displayed with dashes, guessed letters are displayed. these are all updated throughout the progress of the game.
+- Correct / Incorrect notification: This is displayed when the user guessed a correct / incorrect letter respectively.
 - Guess a letter: The user is requested to guess a single letter.
 - Hidden words: These words are randomised from one of the three levels once chosen by the user.
-- Play again: This option is given to the user once the game hav#s been won/lost.
+- Play again: This option is given to the user once the game has been won / lost.
 
 ### Existing Features
 
 - Main screen
+
     - Displays the game logo & welcome message:
+
     ![Logo](./assets/docs/logo-welcome.png)
 
 - Display rules:
+
     - Gives the user an option to see the rules:
+
     ![Rules](./assets/docs/rules.png)
+
     - Rules error displays if the users input is not expected:
+
     ![Rules error](./assets/docs/rules-error.png)
 
 - User name:
+
     - Allows the user to enter thier name (Alphabetical letters only)
+
     ![Name](./assets/docs/user-name.png)
+
     - User name error:
+
     ![Name error](./assets/docs/user-name-error.png)
 
 - Difficulty options:
+
     - Allows the user to choose easy, medium or hard:
+
     ![Difficulty](./assets/docs/difficulty.png)
-    - Error if the option chosen i#does not exist:
+
+    - Error if the option chosen does not exist:
+
     ![Difficulty error](./assets/docs/difficulty-error.png)
 
 - Game display:
-    - The game displays the blank "board" to the user. This shows the hangman gallows, blanked out hidden word, blank guessed letters as well as teh request for the user to guess a letter:
+
+    - The game displays the blank "board" to the user. This displays the hangman gallows, blanked out hidden word, blank guessed letters as well as the request for the user to guess a letter:
+
     ![Game display](./assets/docs/game-display.png)
 
 - Correct guess:
+
     - This displays when the user guessed a letter correctly and updates the hidden word:
+
     ![Correct](./assets/docs/correct.png)
 
 - Incorrect guess:
+
     - This displays when the user guessed a letter incorrectly and updates the hangmans gallows:
+
     ![Incorrect](./assets/docs/incorrect.png)
 
 - Errors on guess:
+
     - This error displays if the user tries to enter anything other than a letter:
+
     ![Not a letter](./assets/docs/not-letter.png)
+
     - This error displays if the user enters more than one letter:
+
     ![More than one letter](./assets/docs/one-letter.png)
 
 - Updated guessed letters list:
+
     - This updates as the user guesses a new letter:
+
     ![Guessed letters](./assets/docs/guessed-letters.png)
 
 - Play again:
-    - This option becomes available to the user onece the game is won/lost:
+
+    - This option becomes available to the user once the game is won / lost:
+
     ![Play again](./assets/docs/play-again.png)
 
 ### Future Features
 
-- Additional words cen be added to the word list.
+- Additional words can be added to the word list.
 - The option of different word categories can be added for the user to choose from.
 - A two player option or an option to play against the computer.
 
 ## Flowchart
+
 ![Flowchart](./assets/docs/flowchart.png)
 
 ## Testing
@@ -140,13 +169,13 @@ Function were tested using [CI Python linter](https://pep8ci.herokuapp.com/) thr
 |Rules: Should be displayed if "y" is entered ot skip if "n" is entered.|Passed|
 |Users name error message: Should be one word and only alphabetical letters.|Passed|
 |Select difficulty: Randomised words should be relevant to the difficulty selected.|Passed|
-|Play again: This should prompt the user at the end of teh round and restart the game is "y" is selected and exit is "n".|Passed|
+|Play again: This should prompt the user at the end of the round and restart the game if "y" is selected and exit if "n".|Passed|
 
 ### Fixed bugs
 
 |What was tested / Expected results|Actual Results|What was done to fix the bug|
 |---|---|---|
-|Select difficulty: To display the correct words list|No words list was selected|I added the difficulty level function to the hangman function and assigned it to a variable|
+|Select difficulty: To display the correct word list|No word list was selected|I added the difficulty level function to the hangman function and assigned it to a variable|
 |Hangmans stages: They should display in order, top to bottom|They were displaying the opposite way around|By changing the max attempts to 0|
 |Hidden word: Supposed to update with the correct letters guessed|No update was displayed|Created a new function which would run this process as it was in a function shared with the stage display and guessed letters|
 
@@ -160,7 +189,7 @@ Function were tested using [CI Python linter](https://pep8ci.herokuapp.com/) thr
 4. Add an app name and select your region
 5. Click 'Create App'
 6. On the next page at the top click 'Settings' then 'Config Vars'
-7. Click 'Reveal Config Vars' then add 'Port' key and value '8000'
+7. Click 'Reveal Config Vars' then add 'Port' key and value '8000' (Optional)
 8. Scroll down and click 'Buildpack'
 9. 'Add', 'Python' & 'Node.js' with Python being first (above) Node.js
 10. At the top of the page again, click 'Deploy'
