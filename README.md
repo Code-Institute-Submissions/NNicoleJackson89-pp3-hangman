@@ -190,8 +190,20 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 3. Click the 'Fork' drop-down in the top right-hand corner
 4. Then click 'Create a new fork' you will now have a copy to work on.
 
-## Technologies Used
+## Technologies, Libraries, Frameworks & Programs Used
 
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+  - Python was used to structure the content of the app
+- [GitHub](https://github.com/)
+  - GitHub is being used to store the code for this web page
+- [Codeanywhere](https://codeanywhere.com/)
+  - Codeanywhere was used as the development environment for this web page
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+  - Used to validate the code and functions
+- [Heroku](https://heroku.com/apps)
+  - Used to deploy the app
+- [Am I Responsive?](https://ui.dev/amiresponsive)
+  - Used to for the image in the README file
 
 ## Credits
 
