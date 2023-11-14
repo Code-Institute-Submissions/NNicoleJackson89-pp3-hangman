@@ -171,9 +171,9 @@ Function were tested using [CI Python linter](https://pep8ci.herokuapp.com/) thr
 |Select difficulty: Randomised words should be relevant to the difficulty selected.|Passed|
 |Play again: This should prompt the user at the end of the round and restart the game if "y" is selected and exit if "n".|Passed|
 |Rules to display: Should display the rules if the users input is correct. No other input is accepted and prompts the user to type either 'y' or 'n'|Passed|
-|Select difficulty: Will only allow the user to input, easy, medium, hard|Passed|
-|Already guessed letters: A message should display to the used that they have already guessed that specific letter|Passed|
-|Win / Lose message: A message should display to the user if they have either won or lost a game|Passed|
+|Select difficulty: Should only allow the user to input either, easy, medium, hard, error message if neither of these are selected|Passed|
+|Already guessed letters: A message should display to the user that they have already guessed that specific letter|Passed|
+|Win / Lose message: A message should display to the user if they have either won or lost the game|Passed|
 
 ### Fixed bugs
 
