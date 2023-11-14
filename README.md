@@ -28,6 +28,24 @@ The users goal is to guess the correct word before the game ends, this is displa
 
 ### User Stories
 
+#### As a first time visitor I want to:
+- Quickly and easily understand how the game works with a clear description of the game objective.
+- Navigate the main menu and options available easily.
+- Start the game, during game play to recieve messages of correct/incorrect guessed letters.
+- Kill time but enjoy the game, left with the mindset of wanting to play again.
+
+#### As a returning visitor I want to:
+- Easily navigate through the menu and options available.
+- Play the game again, with new words to guess and choose different difficulty levels.
+- Improve my word skills and become better at guessing hidden words.
+- Possibly see updated versions of the game
+
+#### As a frequent visitor I want to:
+- Easily navigate through the menu and options available.
+- Have added word categories or new words updated to the game.
+- Possibility or playing against another user or AI.
+- Challenge myself with harder levels.
+
 ## Features
 
 ### Existing Features
