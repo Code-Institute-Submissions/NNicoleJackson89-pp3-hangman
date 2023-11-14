@@ -193,18 +193,38 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 ## Technologies, Libraries, Frameworks & Programs Used
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-  - Python was used to structure the content of the app
+    - Python was used to structure the content of the app
 - [GitHub](https://github.com/)
-  - GitHub is being used to store the code for this web page
+    - GitHub is being used to store the code for this web page
 - [Codeanywhere](https://codeanywhere.com/)
-  - Codeanywhere was used as the development environment for this web page
+    - Codeanywhere was used as the development environment for this web page
 - [CI Python Linter](https://pep8ci.herokuapp.com/)
-  - Used to validate the code and functions
+    - Used to validate the code and functions
 - [Heroku](https://heroku.com/apps)
-  - Used to deploy the app
+    - Used to deploy the app
 - [Am I Responsive?](https://ui.dev/amiresponsive)
-  - Used to for the image in the README file
+    - Used to for the image in the README file
+- [Lucid Chart](https://www.lucidchart.com/pages/)
+    - Used to display the flow/logic of the app
 
 ## Credits
 
+- Game, rules, some text content used from:
+    - [How Do You Play Hangman?](https://www.wikihow.com/Play-Hangman)
+- For guidance, direction and understanding the logic of Hangman and Python, these videos and pages were used:
+    - [Hangman Game using Python](https://cppsecrets.com/users/5617971101051071011161151049711410997484852494964103109971051084699111109/Hangman-Game-using-Python.php)
+    - [Code Your Own HANGMAN Game in Python Quickly](https://www.youtube.com/watch?v=gJBeYcqHNCM&t=291s)
+    - [How To Code Hangman In Python](https://www.youtube.com/watch?v=pFvSb7cb_Us)
+    - [How to add difficulty levels](https://stackoverflow.com/questions/63151142/how-to-add-difficulty-levels-to-my-number-guessing-game)
+- This page was used for guidance in adding color to the terminal:
+    - [How do I print colored text to the terminal?](https://stackoverflow.com/questions/287871/how-do-i-print-colored-text-to-the-terminal)
+- This page was used for guidance in adding the type writer effect:
+  - [Typing effect in Python](https://stackoverflow.com/questions/20302331/typing-effect-in-python)
+- Logo FIGlet:
+  - [patorjk.com](https://patorjk.com/software/taag/#p=display&h=3&v=0&f=Big&t=HANGMAN%0AYOU%20WON!%0AGAME%20OVER%0APLAY%20AGAIN)
+- Slack community for guidance:
+  - [Slack Community](https://app.slack.com/client/T0L30B202/C027C3PLS1W)
+
 ## Acknowledgements
+
+Thank you to my mentor Mitko Bachvarov for his guidance, advice, support as well as my husband and fellow student Iain Jackson for his advice, motivation, troubleshooting assistance throughout the process of this project.
