@@ -26,18 +26,21 @@ The users goal is to guess the correct word before the game ends, this is displa
 ### User Stories
 
 #### As a first time visitor I want to:
+
 - Quickly and easily understand how the game works with a clear description of the game objective.
 - Navigate the main menu and options available easily.
 - Start the game, during game play to recieve messages of correct/incorrect guessed letters.
 - Kill time but enjoy the game, left with the mindset of wanting to play again.
 
 #### As a returning visitor I want to:
+
 - Easily navigate through the menu and options available.
 - Play the game again, with new words to guess and choose different difficulty levels.
 - Improve my word skills and become better at guessing hidden words.
 - Possibly see updated versions of the game
 
 #### As a frequent visitor I want to:
+
 - Easily navigate through the menu and options available.
 - Have added word categories or new words updated to the game.
 - Possibility or playing against another user or AI.
@@ -57,7 +60,59 @@ The users goal is to guess the correct word before the game ends, this is displa
 
 ### Existing Features
 
+- Main screen
+    - Displays the game logo & welcome message:
+    ![Logo](./readme-docs/logo-welcome.png)
+
+- Display rules:
+    - Gives the user an option to see the rules:
+    ![Rules](./readme-docs/rules.png)
+    - Rules error displays if the users input is not expected:
+    ![Rules error](./readme-docs/rules-error.png)
+
+- User name:
+    - Allows the user to enter thier name (Alphabetical letters only)
+    ![Name](./readme-docs/user-name.png)
+    - User name error:
+    ![Name error](./readme-docs/user-name-error.png)
+
+- Difficulty options:
+    - Allows the user to choose easy, medium or hard:
+    ![Difficulty](./readme-docs/difficulty.png)
+    - Error if the option chosen i#does not exist:
+    ![Difficulty error](./readme-docs/difficulty-error.png)
+
+- Game display:
+    - The game displays the blank "board" to the user. This shows the hangman gallows, blanked out hidden word, blank guessed letters as well as teh request for the user to guess a letter:
+    ![Game display](./readme-docs/game-display.png)
+
+- Correct guess:
+    - This displays when the user guessed a letter correctly and updates the hidden word:
+    ![Correct](./readme-docs/correct.png)
+
+- Incorrect guess:
+    - This displays when the user guessed a letter incorrectly and updates the hangmans gallows:
+    ![Incorrect](./readme-docs/incorrect.png)
+
+- Errors on guess:
+    - This error displays if the user tries to enter anything other than a letter:
+    ![Not a letter](./readme-docs/not-letter.png)
+    - This error displays if the user enters more than one letter:
+    ![More than one letter](./readme-docs/one-letter.png)
+
+- Updated guessed letters list:
+    - This updates as the user guesses a new letter:
+    ![Guessed letters](./readme-docs/guessed-letters.png)
+
+- Play again:
+    - This option becomes available to the user onece the game is won/lost:
+    ![Play again](./readme-docs/play-again.png)
+
 ### Future Features
+
+- Additional words cen be added to the word list.
+- The option of different word categories can be added for the user to choose from.
+- A two player option or an option to play against the computer.
 
 ## Flowchart
 ![Flowchart](./readme-docs/flowchart.png)
