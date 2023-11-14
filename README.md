@@ -15,9 +15,6 @@ Users can play a solo game of Hangman on one of three difficulty levels, each le
 - The object of this solo game is to guess the hidden word before the stick man is hung.
 - Gameplay continues until the figure has been hung (after 6 incorrect guesses) or the word has been correctly guessed, one letter at a time.
 
-## Flowchart
-![Flowchart](./readme-docs/flowchart.png)
-
 ## User Experience
 
 In this version of Hangman the user is presented with the classic game where each letter of a word is replaced with a dash (hidden word).  The user will need to guess this word one letter at a time. 
@@ -48,9 +45,22 @@ The users goal is to guess the correct word before the game ends, this is displa
 
 ## Features
 
+- The main screen: This displays the games name as well as the welcome message followed by an option to view the game rules.
+- Game rules: These will be displayed if the user chooses to see them, if not, this step will be skipped.
+- Name request: The user is requested to input their name.
+- Difficulty options: The user can choose from three options, easy, medium, hard.
+- Game display: The hangmans gallows is displayed, the hidden word is displayed with dashes, guessed letters are displayed. these all ghet updated throughout the progress of the game.
+- Correct/Incorrect notification: This is displayed when the used guessed a correct/incorrect letetr respectively.
+- Guess a letter: The user is requested to guess a single letter.
+- Hidden words: These words are randomised from one of the three levels once chosen by the user.
+- Play again: This option is given to the user once the game hav#s been won/lost.
+
 ### Existing Features
 
 ### Future Features
+
+## Flowchart
+![Flowchart](./readme-docs/flowchart.png)
 
 ## Testing
 
