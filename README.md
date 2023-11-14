@@ -121,28 +121,27 @@ The users goal is to guess the correct word before the game ends, this is displa
 
 ### CI Python Linter
 
-### Python Checker
-
-#### Testing
+Function were tested using [CI Python linter](https://pep8ci.herokuapp.com/) throughout the building process of the game, making the fnal testing stage simpler and a smoother process.
+![run.py](./readme-docs/run.png)
+![words.py](./readme-docs/word-list.png)
+![hangman_stage.py](./readme-docs/hangman.png)
 
 ### Manual Testing
 
 |What was tested|Result|
 |---|---|
-|||
-|||
-|||
-|||
-
-### Input validation Testing
+|Rules: Should be displayed if "y" is entered ot skip if "n" is entered.|Passed|
+|Users name error message: Should be one word and only alphabetical letters.|Passed|
+|Select difficulty: Randomised words should be relevant to the difficulty selected.|Passed|
+|Play again: This should prompt the user at the end of teh round and restart the game is "y" is selected and exit is "n".|Passed|
 
 ### Fixed bugs
 
 |What was tested / Expected results|Actual Results|What was done to fix the bug|
 |---|---|---|
-||||
-||||
-||||
+|Select difficulty: To display the correct words list|No words list was selected|I added the difficulty level function to the hangman function and assigned it to a variable|
+|Hangmans stages: They should display in order, top to bottom|They were displaying the opposite way around|By changing the max attempts to 0|
+|Hidden word: Supposed to update with the correct letters guessed|No update was displayed|Created a new function which would run this process as it was in a function shared with the stage display and guessed letters|
 
 ## Deployment
 
