@@ -23,6 +23,13 @@ With each correct guess the dash within this word updates and displays the lette
 
 The users goal is to guess the correct word before the game ends, this is displayed with a complete hangman stick figure as well as a message to notify the user that he/she has lost the game.
 
+### Color Palette
+
+- The logo and the rules displays as purple
+- Error messages display in red to highlight a problem to the user
+- Correct guess notifications are displayed in green
+- Incorrect guess notifications are displayed in yellow
+
 ### User Stories
 
 #### As a first time visitor I want to:
@@ -184,6 +191,7 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 4. Then click 'Create a new fork' you will now have a copy to work on.
 
 ## Technologies Used
+
 
 ## Credits
 
