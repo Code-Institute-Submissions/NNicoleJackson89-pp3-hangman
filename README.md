@@ -147,7 +147,20 @@ Function were tested using [CI Python linter](https://pep8ci.herokuapp.com/) thr
 
 ### [Heroku](https://heroku.com/apps) deployment
 
-
+1. Login to Heroku
+2. On the Heroku dashboard click on 'New'
+3. Select 'Create New App'
+4. Add an app name and select your region
+5. Click 'Create App'
+6. On the next page at the top click 'Settings' then 'Config Vars'
+7. Click 'Reveal Config Vars' then add 'Port' key and value '8000'
+8. Scroll down and click 'Buildpack'
+9. 'Add', 'Python' & 'Node.js' with Python being first (above) Node.js
+10. At the top of the page again, click 'Deploy'
+11. Click on 'Github' as your deployment method
+12. Search the relevant repo and link these
+13. Once linked, select 'Automatic deploys from' or 'Manual Deploy'
+14. The app will now be hosted on Heroku.
 
 ### Cloning the GitHub repository
 
